@@ -4,7 +4,7 @@
 */
 void main() {
   // We can decide a message to display based on the current temperature
-  final temp = 60;
+  const temp = 60;
 
   /*
     If temperature is 10 and 18 ===> cold,

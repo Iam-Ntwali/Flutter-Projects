@@ -41,11 +41,11 @@ void main() {
   behavior of a List value can still be changed,So prevent this both final and const are used.
   */
 
-  final String wife = 'does not exist 😆';
+  const String wife = 'does not exist 😆';
   print('A good wife $wife');
 
   // Declaring a list
-  final List<String> STUDENTS = const [
+  const List<String> STUDENTS = [
     'John',
     'Peter',
     'Paul'

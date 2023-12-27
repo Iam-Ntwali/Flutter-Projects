@@ -1,29 +1,29 @@
 //Class Object and Constructors in Dart
 void main() {
-  Person Person_One = Person(
+  Person personOne = Person(
     'Paul',
     21,
     'Male',
   );
-  Person Person_Two = Person(
+  Person personTwo = Person(
     'Peter',
     21,
     'Male',
   );
-  Person Person_Three = Person(
+  Person personThree = Person(
     'John',
     21,
     'Non-Binary',
   );
 
-  Person_Three = Person.contact(
+  personThree = Person.contact(
     email: 'John@yahoo.com',
     phone: '078432784',
   );
 
-  print(Person_One.name);
-  print(Person_Two.age);
-  print(Person_Three.email);
+  print(personOne.name);
+  print(personTwo.age);
+  print(personThree.email);
 }
 
 class Person {
