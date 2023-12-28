@@ -6,8 +6,8 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('My App'),
-          backgroundColor: Colors.brown,
+          title: const Text('My App'),
+          backgroundColor: Colors.blueGrey[900],
         ),
       ),
     ),
