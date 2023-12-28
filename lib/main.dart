@@ -10,17 +10,14 @@ void main() {
           backgroundColor: Colors.blueGrey[900],
           title: const Text(
             'My App',
-            style: TextStyle(
-              color: Colors.grey,
-            ),
+            style: TextStyle(color: Colors.grey),
           ),
         ),
         body: const Center(
-            child: Image(
-          image: AssetImage(
-            'assets/diamond.png',
+          child: Image(
+            image: AssetImage('assets/diamond.png'),
           ),
-        )),
+        ),
       ),
     ),
   );
