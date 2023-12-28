@@ -5,9 +5,13 @@ void main() {
     MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Colors.blueGrey,
         appBar: AppBar(
-          title: const Text('My App'),
           backgroundColor: Colors.blueGrey[900],
+          title: const Text(
+            'My App',
+            style: TextStyle(color: Colors.grey),
+          ),
         ),
       ),
     ),
