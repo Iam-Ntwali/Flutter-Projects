@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               const CircleAvatar(
-                radius: 60.0,
+                radius: 50.0,
                 backgroundImage: AssetImage(
                   'assets/3d-hygge.png',
                 ),
@@ -46,52 +46,59 @@ class MyApp extends StatelessWidget {
                 'SOFTWARE DEVELOPER 💻',
                 style: TextStyle(
                   fontFamily: 'MonoLisa',
+                  fontWeight: FontWeight.bold,
                   fontSize: 18.0,
                   color: Colors.amber,
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      size: 32.0,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      '+250 789-357 482',
-                      style: TextStyle(
-                        color: Colors.teal[900],
-                        fontSize: 18.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.phone,
+                        size: 32.0,
+                        color: Colors.teal,
                       ),
-                    )
-                  ],
+                      SizedBox(width: 10),
+                      Text(
+                        '+250 789-357 482',
+                        style: TextStyle(
+                          color: Colors.teal[900],
+                          fontSize: 18.0,
+                          fontFamily: 'MonoLisa',
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
-                padding: EdgeInsets.all(10.0),
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      size: 32.0,
-                      color: Colors.teal,
-                    ),
-                    SizedBox(width: 10),
-                    Text(
-                      'ntwalipit@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal[900],
-                        fontSize: 18.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.email,
+                        size: 32.0,
+                        color: Colors.teal,
                       ),
-                    )
-                  ],
+                      SizedBox(width: 10),
+                      Text(
+                        'ntwalipit@gmail.com',
+                        style: TextStyle(
+                          color: Colors.teal[900],
+                          fontSize: 18.0,
+                          fontFamily: 'MonoLisa',
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
             ],
