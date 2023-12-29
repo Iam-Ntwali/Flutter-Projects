@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_const
+// ignore_for_file: unnecessary_const, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.teal,
         // appBar: AppBar(
         //   title: const Text(
         //     'My First App',
@@ -24,20 +24,74 @@ class MyApp extends StatelessWidget {
         //   ),
         //   backgroundColor: Colors.blueAccent,
         // ),
-        body: const SafeArea(
+        body: SafeArea(
           child: Column(
             children: [
-              CircleAvatar(
-                radius: 50.0,
+              const CircleAvatar(
+                radius: 60.0,
                 backgroundImage: AssetImage(
                   'assets/3d-hygge.png',
                 ),
               ),
-              Text(
+              const Text(
                 'Ntwali 🇷🇼',
                 style: TextStyle(
                   fontSize: 40.0,
                   fontWeight: FontWeight.bold,
+                  fontFamily: 'Coiny',
+                  color: Colors.white,
+                ),
+              ),
+              const Text(
+                'SOFTWARE DEVELOPER 💻',
+                style: TextStyle(
+                  fontFamily: 'MonoLisa',
+                  fontSize: 18.0,
+                  color: Colors.amber,
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      size: 32.0,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      '+250 789-357 482',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontSize: 18.0,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      size: 32.0,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      'ntwalipit@gmail.com',
+                      style: TextStyle(
+                        color: Colors.teal[900],
+                        fontSize: 18.0,
+                      ),
+                    )
+                  ],
                 ),
               ),
             ],
