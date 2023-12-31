@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'pages/mi_card.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,92 +15,96 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.teal,
-        // appBar: AppBar(
-        //   title: const Text(
-        //     'My First App',
-        //     style: TextStyle(
-        //       fontWeight: FontWeight.w600,
-        //     ),
-        //   ),
-        //   backgroundColor: Colors.blueAccent,
-        // ),
-        body: SafeArea(
-          child: Column(
-            // Column
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const CircleAvatar(
-                radius: 50.0,
-                backgroundImage: AssetImage(
-                  'assets/3d-hygge.png',
-                ),
-              ),
-              const Text(
-                'Ntwali 🇷🇼',
-                style: TextStyle(
-                  fontSize: 40.0,
-                  fontFamily: 'Pacifico',
-                  color: Colors.white,
-                ),
-              ),
-              const Text(
-                'SOFTWARE DEVELOPER 💻',
-                style: TextStyle(
-                  fontFamily: 'MonoLisa',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18.0,
-                  color: Colors.amber,
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-                width: 250.0,
-                child: Divider(
-                  color: Colors.amber.shade100,
-                ),
-              ),
-              Card(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.phone,
-                    size: 32.0,
-                    color: Colors.teal,
-                  ),
-                  title: Text(
-                    '+250 789-357 482',
-                    style: TextStyle(
-                      color: Colors.teal[900],
-                      fontSize: 18.0,
-                      fontFamily: 'MonoLisa',
-                    ),
-                  ),
-                ),
-              ),
-              Card(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.email,
-                    size: 32.0,
-                    color: Colors.teal,
-                  ),
-                  title: Text(
-                    'ntwalipit@gmail.com',
-                    style: TextStyle(
-                      color: Colors.teal[900],
-                      fontSize: 18.0,
-                      fontFamily: 'MonoLisa',
-                    ),
-                  ),
-                ),
-              ),
-            ],
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.blueAccent[100],
+      appBar: AppBar(
+        backgroundColor: Colors.blueAccent,
+        title: Text(
+          'Homepage',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
+            fontFamily: 'Pacifico',
+            fontWeight: FontWeight.bold,
           ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MiCard(),
+                ),
+              ),
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 20.0),
+                decoration: BoxDecoration(
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(
+                      'Simple Mi-Card 🪪',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'MonoLisa',
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 15), // Separator
+
+            GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MiCard(),
+                ),
+              ),
+              child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 20.0),
+                decoration: BoxDecoration(
+                  color: Colors.redAccent,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: Text(
+                      'Simple Dice App 🎲',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        fontFamily: 'MonoLisa',
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            )
+          ],
         ),
       ),
     );
