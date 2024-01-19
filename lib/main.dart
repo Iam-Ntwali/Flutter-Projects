@@ -1,7 +1,6 @@
 // ignore_for_file: unnecessary_const, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-
 import 'pages/mi_card.dart';
 
 void main() {
@@ -27,18 +26,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueAccent[100],
-      appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
-        title: Text(
-          'Homepage',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontFamily: 'Pacifico',
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      appBar: appBar(),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -105,6 +93,21 @@ class HomePage extends StatelessWidget {
               ),
             )
           ],
+        ),
+      ),
+    );
+  }
+
+  AppBar appBar() {
+    return AppBar(
+      backgroundColor: Colors.blueAccent,
+      title: Text(
+        'Homepage',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: 'Pacifico',
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
